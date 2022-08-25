@@ -9,10 +9,10 @@ pizzaJson.map((item, index) => {
 
 
 
-  pizzaItem.querySelector('.pizza-item--img img').src = item.img
-  pizzaItem.querySelector( '.pizza-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`
-  pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name
-  pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description
+  pizzaItem.querySelector('.pizza-item--img img').src = item.img;
+  pizzaItem.querySelector( '.pizza-item--price').innerHTML = `R$ ${item.price.toFixed(2)}`;
+  pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
+  pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
   pizzaItem.querySelector('a').addEventListener('click', e => {
     e.preventDefault()
 
@@ -22,6 +22,7 @@ pizzaJson.map((item, index) => {
 
     c('.pizzaInfo h1').innerHTML = pizzaJson[key].name;
     c('.pizzaInfo--desc').innerHTML = pizzaJson[key].description;
+    c('.pizzaInfo--actualPrice').innerHTML = `R$ ${pizzaJson[key].price.toFixed(2)}`;
 
     c('.pizzaWindowArea').style.opacity = 0
     c('.pizzaWindowArea').style.display = 'flex'
