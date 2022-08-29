@@ -53,5 +53,31 @@ pizzaJson.map((item, index) => {
 //EVENTOS DO MODAL
 
 function closeModal() {
-  
+  c('.pizzaWindowArea').style.opacity = 0;
+  setTimeout(()=>{
+    c('.pizzaWindowArea').style.display = 'none';
+  }, 500);
 }
+
+cs('.pizzaInfo--cancelButton, pizzaInfo--cancelMobileButton').forEach((item)=>{
+  item.addEventListener('click', closeModal);
+});
+
+
+c('.pizzaInfo--qtmenos').addEventListener('click', ()=>{
+  if(modalQt > 1){
+
+    modalQt--;
+    c('.pizzaInfo--qt').innerHTML = modalQt;
+    
+  }
+
+  
+});
+
+
+c('.pizzaInfo--qtmais').addEventListener('click', ()=>{
+  modalQt++;
+  c('.pizzaInfo--qt').innerHTML = modalQt;
+
+});
