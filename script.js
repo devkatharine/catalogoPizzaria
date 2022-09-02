@@ -1,3 +1,4 @@
+let cart = [];
 let modalQt = 1
 
 const c = el => document.querySelector(el)
@@ -20,6 +21,9 @@ pizzaJson.map((item, index) => {
     e.preventDefault()
 
     let key = e.target.closest('.pizza-item').getAttribute('data-key')
+    modalQt = 1;
+    modalKey = key;
+
 
     c('.pizzaBig img').src = pizzaJson[key].img
 
@@ -89,4 +93,8 @@ cs('.pizzaInfo--size').forEach((size, sizeIndex)=>{
     size.classList.add('selected');
 
   });
+})
+
+c('.pizza--addButton').addEventListener('click', ()=>{
+
 })
