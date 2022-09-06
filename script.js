@@ -96,5 +96,11 @@ cs('.pizzaInfo--size').forEach((size, sizeIndex)=>{
 })
 
 c('.pizza--addButton').addEventListener('click', ()=>{
+  //Qual pizza 
+  let size = c('.pizzaInfo--size.selected').getAttribute('data-key');
+
+  //Qual tamanho
+  cart.push
+
 
 })
